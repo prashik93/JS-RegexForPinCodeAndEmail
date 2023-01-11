@@ -6,7 +6,7 @@ class RegexForEmail {
 
     get email() {return this._email;}
     set email(email) {
-        let emailRegex = RegExp('^[a-z]{3}[.|_|+|-][a-z]{3,}[@][a-z]{3,}[.][co]{2}$');
+        let emailRegex = RegExp('^[a-z]{3}[.|_|+|-][a-z]{3,}[@][a-z]{3,}[.][co]{2}[.][a-z]{2}$');
         if(emailRegex.test(email)){
             this._email = email;
         }
@@ -18,7 +18,7 @@ class RegexForEmail {
     }
 }
 
-let regexForEmail = new RegexForEmail("abc.xyz@bridgelabz.co");
+let regexForEmail = new RegexForEmail("abc-xyz@bridgelabz.co.in");
 console.log(regexForEmail.toString());
 
 try{
