@@ -6,7 +6,7 @@ class RegexForPinCode {
 
     get pinCode() {return this._pinCode;}
     set pinCode(pinCode) {
-        let pinCodeRegex = RegExp('[1-9][0-9]{5}');
+        let pinCodeRegex = RegExp('^[1-9][0-9]{5}');
         if(pinCodeRegex.test(pinCode)){
             this._pinCode = pinCode;
         }
@@ -22,7 +22,7 @@ let regexForPinCode = new RegexForPinCode("400088");
 console.log(regexForPinCode.toString());
 
 try{
-    regexForPinCode.pinCode = "444";
+    regexForPinCode.pinCode = "A400088";
     console.log(regexForPinCode.toString());
 } catch(e) {
     console.error(e);
